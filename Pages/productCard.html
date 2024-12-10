@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductCard</title>
+    <style>
+        div {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .prd-card {
+            border: 1px solid #d5d9d9;
+            width: 23rem;
+            height: 40.3rem;
+            border-radius: 6px;
+        }
+
+        .prd-card-detail {
+            /* border: 1px solid green; */
+            height: 36.1rem;
+        }
+
+        .prd-card-img {
+            /* border: 1px solid green; */
+            max-height: 25rem;
+            font-size: 14px;
+            background-color: rgba(0,0,0,.03);
+            padding: 12px;
+        }
+        img {
+            /* hace algo transparente la imagen */
+            mix-blend-mode: multiply;
+        }
+        .prd-card-descr {
+            /* border: 1px solid green; */
+            height: 14rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prd-summary {
+            height: 3.9rem;
+            font-size: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limitar a 3 líneas */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.3em;
+            padding: 0px 12px;
+            /* border: 1px solid; */
+        }
+
+        .prd-card-button {
+            height: 4rem;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 60px;
+            border-radius: 100px;
+            background: #ffd814;
+            border: #ffd814 1px solid
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                41vQZAUqtdL._MCnd_AC_.jpg
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+    </div>
+</body>
+</html>

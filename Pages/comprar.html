@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../componets.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Comprar</title>
+    <style>
+        div {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .prd-card {
+            border: 1px solid #d5d9d9;
+            width: 23rem;
+            height: 40.3rem;
+            border-radius: 6px;
+        }
+
+        .prd-card-detail {
+            /* border: 1px solid green; */
+            height: 36.1rem;
+        }
+
+        .prd-card-img {
+            /* border: 1px solid green; */
+            max-height: 25rem;
+            font-size: 14px;
+            background-color: rgba(0,0,0,.03);
+            padding: 12px;
+        }
+        img {
+            /* hace algo transparente la imagen */
+            mix-blend-mode: multiply;
+        }
+        .prd-card-descr {
+            /* border: 1px solid green; */
+            height: 14rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prd-summary {
+            height: 3.9rem;
+            font-size: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limitar a 3 líneas */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.3em;
+            padding: 0px 12px;
+            /* border: 1px solid; */
+        }
+
+        .prd-card-button {
+            height: 4rem;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 60px;
+            border-radius: 100px;
+            background: #ffd814;
+            border: #ffd814 1px solid
+            
+        }
+      .lista-prod {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-rows: repeat(12, 1fr); */
+        gap: 10px;
+
+      }
+      @media screen and (max-width: 576px) {
+        .lista-prod {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media screen and (min-width:577px) and (max-width: 768px) {
+        .lista-prod {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width:768px) and (max-width: 1024px) {
+        .lista-prod {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width:1025px) {
+        .lista-prod {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar bg-primary text-light mb-3">
+      <!-- Logo y busqueda -->
+      <div class="navbar-logo">
+        <a class="navbar-brand" href="../index.html"
+          ><span class="logo">MiTienda</span>
+        </a>
+        <ul class="unordered" style="display: flex; flex-direction: row;">
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="./Pages/filters.html">Filtro</a>
+          </li>
+          <li class="nav-item">
+            <div style="display: flex; flex-direction: row;">
+              <label for="search"><img src="./img/search.png" alt=""></label>
+              <input id="search" type="text">
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler btn btn-sm btn-close-white">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="navbar-collapse">
+        <ul class="navbar-nav unordered">
+          <!-- todo: Update pages  > -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Pages/logIn.html">Ingreso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Pages/register.html">Registro</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./Pages/orders.html">Ordenes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Pages/cart.html">Canasta</a>
+          </li>
+          <!-- todo: < Update pages   -->
+        </ul>
+      </div>
+
+      <!-- <button class="navbar-toggler btn btn-sm btn-close-white">
+        <i class="fa-solid fa-bars"></i>
+      </button>       -->
+
+    </nav>
+
+    <div class="lista-prod">
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+      <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/413tHDeJGRL._MCnd_AC_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="Producto" style="width: 100%; height: 100%; object-fit: cover;"> -->
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    MUNBYN Rugged Windows Tablet IRT06, 8 inch Windows 10 Pro Rugged Tablet, 8GB+128GB Industrial Tablets, Intel N5100 5000mAh Tablet PC, 700nit Work Tablet, 4G LTE Tablet, Construction 2024,2Y Protection
+                </span>
+                <div style="font-weight: 600; margin: 0px 12px;">4.6 out of 5 stars</div>
+                <div style=" margin: 0px 12px;"></div>
+                <div style="font-weight: 600; font-size: 20px; margin: 5px 12px;">$569.99</div>
+                <div style=" margin: 0px 12px;">FREE delivery Wed, Nov 27</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button>Añadir a Canasta</button>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

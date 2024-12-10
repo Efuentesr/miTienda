@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductCard</title>
+    <style>
+        div {
+            margin: 0px;
+            padding: 0px;
+        }
+        .prd-card {
+            border: 1px solid red;
+            width: 23rem; 
+            height: 40.3rem;
+        }
+        .prd-card-detail {
+            border: 1px solid green;
+            height: 36.1rem;
+        }
+        .prd-card-img {
+            border: 1px solid green;
+            height: 22rem;
+        }
+        .prd-card-descr {
+            border: 1px solid green;
+            height: 14rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .prd-summary {
+            height: 3.9rem;
+             /* white-space: nowrap; */
+             word-wrap: anywhere;
+             line-height: 1.3em;
+             overflow: hidden;
+             text-overflow: ellipsis;
+            border: 1px solid;
+            /* margin-bottom: 2px; */
+        }
+        .prd-card-button {
+            height: 4rem;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-prd {
+            padding: 10px 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="prd-card">
+        <div class="prd-card-detail">
+            <div class="prd-card-img">
+                <img src="../img/513m0czV0lL._AC_UL320_.jpg" alt="">
+            </div>
+            <div class="prd-card-descr">
+                <span class="prd-summary">
+                    [2-Pack ] LAXYA USB C Wall Charger, 40W Fast USB C Charger Block, 4-Port PD Power Adapter + QC Wall Plug Multiport Type C Charging Block Cube Compatible with iPhone16/15/14/13 Pro XS/XR,iPad Samsung
+                </span>
+                <div>4.8 out of 5 stars</div>
+                <div>50+ bought in past month</div>
+                <div>$17.99</div>
+                <div>FREE delivery Wed, Nov 27 to Peru on $49 of eligible items</div>
+            </div>
+        </div>
+        <div class="prd-card-button">
+            <button class="btn-prd">Añadir</button>
+        </div>
+    </div>
+</body>
+</html>
