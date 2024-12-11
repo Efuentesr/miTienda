@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./componets.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>mm Education</title>
+  </head>
+  <body>
+
+    <div id="nav-container"></div>
+
+    <div class="container">
+      <div class="container container-sm d-flex flex-column header">
+        <h1 class="title text-center mb-4">Registrar una cuenta nueva</h1>
+        <div class="card p-2">
+          <div class="card-body">
+            <h5 class="card-title">Ingrese su información</h5>
+            <form action="./welcome.html" id="register">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  placeholder="Ingrese su nombre completo"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Ingrese su email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="Ingrese su password"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Confirmar Password</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  class="form-control"
+                  placeholder="Confirme Password ingresado"
+                />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./nav.js"></script>
+    <script src="./registerFormValidation.js"></script>
+    <script>
+      fetch('./nav.html')
+              .then(response => response.text())
+              .then(html => {
+                  document.getElementById('nav-container').innerHTML = html;
+              })
+              .catch(error => console.error('Error al cargar el menú:', error));
+    </script>    
+  </body>
+</html>

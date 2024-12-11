@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./componets.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="./filtro.css">
+</head>
+<body>
+    <div id="nav-container"></div>
+
+    <div id="mostrar-filtro" class="filtro cardEd p-2">
+        <h1 style="text-align: center;" id="cardTitle">Elija filtro</h1>
+        <div id="listOfFamilies">
+        </div>
+        <button id="btn-filtro" class="btn btn-primary">Continuar</button>
+    </div>
+    <script src="./filtro.js"></script>
+    <script>
+        fetch('./nav.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('nav-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error al cargar el menú:', error));
+    </script>
+
+</body>
+</html>
