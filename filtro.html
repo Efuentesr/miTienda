@@ -17,8 +17,50 @@
     <link rel="stylesheet" href="./filtro.css">
 </head>
 <body>
-    <div id="nav-container"></div>
+<!--  -->
 
+<nav class="navbar bg-primary text-light mb-3">
+    <div class="navbar-logo">
+      <a class="navbar-brand" href="./index.html">
+        <span class="logo">MiTienda</span>
+      </a>
+      <ul class="unordered" style="display: flex; flex-direction: row;">
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="./filtro.html">Filtro</a>
+        </li>
+        <li class="nav-item">
+          <div style="display: flex; flex-direction: row;">
+            <label for="search"><i style="font-size: 20px;" class="fa-solid fa-magnifying-glass"></i></label>
+            <input id="search" type="text">
+          </div>
+        </li>
+      </ul>
+      <button id="navbar-toggler-ID" class="navbar-toggler btn btn-sm btn-close-white">
+        <i id="efrm" class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="navbar-collapse">
+      <ul class="navbar-nav unordered">
+        <!-- todo: Update pages  > -->
+        <li class="nav-item">
+          <a class="nav-link" href="./logIn.html">Ingreso</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./register.html">Registro</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./orders.html">Ordenes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./cart.html">Canasta</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<!--  -->
+    
     <div id="mostrar-filtro" class="filtro cardEd p-2">
         <h1 style="text-align: center;" id="cardTitle">Elija filtro</h1>
         <div id="listOfFamilies">
@@ -26,14 +68,7 @@
         <button id="btn-filtro" class="btn btn-primary">Continuar</button>
     </div>
     <script src="./filtro.js"></script>
-    <script>
-        fetch('./nav.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('nav-container').innerHTML = html;
-                })
-                .catch(error => console.error('Error al cargar el menú:', error));
-    </script>
+    <script src="./nav.js"></script>
 
 </body>
 </html>
