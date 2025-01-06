@@ -72,14 +72,14 @@ const Nav = ({ setView }) => {
                 <div className={`navbar-part2 ${isMenuOpen ? "showNavbar" : ""}`}>
                     <ul className={`navbar-items ${isMenuOpen ? "showItems" : ""}`}>
                     <li className="nav-item">
-                        <a className="nav-link" href="./comprar.html">Comprar</a>
+                        <a className="nav-link" href="#" onClick={() => setView('comprar')}>Comprar</a>
                     </li>
 
                     <li className="nav-item">
                         <a className="nav-link" href="#" onClick={() => setView('login')}>Ingreso</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="./register.html">Registro</a>
+                        <a className="nav-link" href="#" onClick={() => setView('register')}>Registro</a>
                     </li>
             
                     <li className="nav-item">

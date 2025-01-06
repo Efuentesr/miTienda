@@ -7,6 +7,8 @@ import Nav from "./nav";
 import Presentation from "./Presentation";
 import Families from "./Families";
 import Login from "./LogIn";
+import Register from './Register'
+import Comprar from './Comprar'
 
 import "./estilos.css";
 import "./myStyle.css";
@@ -31,8 +33,10 @@ const App = () => {
         return <Presentation />;
       case 'login':
         return <Login />;
-      case 'services':
-        return <Services />;
+      case 'register':
+          return <Register />;
+      case 'comprar':
+        return <Comprar />;
       case 'contact':
         return <Contact />;
       default:
