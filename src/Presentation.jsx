@@ -1,6 +1,7 @@
 import Families from "./Families";
 
 const Presentation = () => {
+    console.log('Me llamaron');
     return (
         <>
             <div className="container container-lg">
@@ -11,7 +12,7 @@ const Presentation = () => {
                         </h1>
                         <p className="header-text mb-3">
                             Seleccione los productos que uds. requiere en el catalogo, o comuniquese 
-                            con nosotros a traves de whatsapp al numero 9777888, estaremos gustosos
+                            con nosotros a traves de whatsapp al numero 9777888765, estaremos gustosos
                             de acompañarlo.
                         </p>
                         {/* <div className="header-btn">

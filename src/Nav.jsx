@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-const Nav = () => {
+const Nav = ({ setView }) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -32,12 +32,12 @@ const Nav = () => {
 
 
                 <div className="navbar-part1">
-                    <a className="navbar-brand" href="./index.html" >
+                    <a className="navbar-brand" href="#" onClick={() => setView('presentation')}>
                         <span className="logo">MiTienda</span>
                     </a>
                     <ul className="navbar-items" >
                         <li className="nav-item">
-                            <a className="nav-link" href="./filtro.html"  onClick={callFiltro}>Filtro</a>
+                            <a className="nav-link" href="#"  onClick={callFiltro}>Filtro</a>
                         </li>
                         <li className="nav-item">
                             <div style={{display: 'flex'}}>

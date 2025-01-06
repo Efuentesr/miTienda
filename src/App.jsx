@@ -1,5 +1,8 @@
-import Titulo from "./Titulo";
-import Boton from "./Boton";
+import React, { useState } from "react";
+
+// import Titulo from "./Titulo";
+// import Boton from "./Boton";
+
 import Nav from "./nav";
 import Presentation from "./Presentation";
 import Families from "./Families";
@@ -11,19 +14,39 @@ import "./nav.css";
 
 import { families } from "./data/prodFamilies";
 // console.log(families)
-const saludar = () => {
-  alert("Hola click");
-}
-const myHr="<hr />"
+// const saludar = () => {
+//   alert("Hola click");
+// }
+// const myHr="<hr />"
 // el nombre componente tiene que comenzar con Mayuscula
 const App = () => {
   // tiene que retornar un solo elemento
   // console.log("Prueba")
-  const titulo = "!! Hola React !!"
+  // const titulo = "!! Hola React !!"
+
+  const [view, setView] = useState('presentation'); // Estado inicial
+  const renderView = () => {
+    switch (view) {
+      case 'presentation':
+        return <Presentation />;
+      case 'about':
+        return <About />;
+      case 'services':
+        return <Services />;
+      case 'contact':
+        return <Contact />;
+      default:
+        return <Home />;
+    }
+  };
+
   return (
     <>
-      <Nav  />  
-      <Presentation />
+      <Nav setView = { setView } />  
+      <div>
+        { renderView() }
+      </div>
+      {/* <Presentation /> */}
       <Login />
 
       <h1>*********</h1>
@@ -31,12 +54,12 @@ const App = () => {
       <h1>*********</h1>
       <hr />
 
-      <Titulo texto={ titulo } region="Lima" />
+      {/* <Titulo texto={ titulo } region="Lima" />
       <Titulo texto="Hello world" region="Arequipa" />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, praesentium? { 10+ 20 }</p>
       <hr />
       <button onClick={ saludar } className="texto-verde">Click</button>
-      <Boton texto="CLickea" accion={saludar} />
+      <Boton texto="CLickea" accion={saludar} /> */}
     </>
   )
 }
