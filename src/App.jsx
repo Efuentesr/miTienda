@@ -29,8 +29,8 @@ const App = () => {
     switch (view) {
       case 'presentation':
         return <Presentation />;
-      case 'about':
-        return <About />;
+      case 'login':
+        return <Login />;
       case 'services':
         return <Services />;
       case 'contact':

@@ -32,7 +32,16 @@ const Nav = ({ setView }) => {
 
 
                 <div className="navbar-part1">
-                    <a className="navbar-brand" href="#" onClick={() => setView('presentation')}>
+
+                    {/* <a className="navbar-brand" href="#" onClick={() => setView('presentation')}> */}
+                    <a className="navbar-brand" href="#" onClick={() => {
+                        console.log('click on miTienda');
+                    
+                        setView('presentation');
+                        }}
+                    >
+
+
                         <span className="logo">MiTienda</span>
                     </a>
                     <ul className="navbar-items" >
@@ -67,7 +76,7 @@ const Nav = ({ setView }) => {
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" href="./logIn.html">Ingreso</a>
+                        <a className="nav-link" href="#" onClick={() => setView('login')}>Ingreso</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="./register.html">Registro</a>

@@ -22,7 +22,7 @@ const Presentation = () => {
                         </div> */}
                     </div>
                     <Families />
-                    </header>
+                </header>
             </div>
             {/* {prodFamilies.mostrarFamilias()} */}
         </>
