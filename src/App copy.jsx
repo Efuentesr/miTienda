@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // import Boton from "./Boton";
 
 import Nav from "./components/Nav";
-import Presentation from "./Presentation";
+import Presentation from "./components/Presentation";
 import Families from "./Families";
 import Login from "./LogIn";
 import Register from './Register'

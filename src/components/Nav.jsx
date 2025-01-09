@@ -1,14 +1,10 @@
 import React, { useState, useRef } from "react";
 import { Link } from 'react-router-dom';
 
-// const Nav = ({ setView }) => {
 const Nav = () => {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     // Ref para manejar el ícono del botón de menú
     const iconRef = useRef(null);
-
     const toggleMenu = () => {
         setIsMenuOpen((prev) => !prev);
         // Cambiar las clases del ícono manualmente usando refs
@@ -23,9 +19,9 @@ const Nav = () => {
         }
     };
 
-    const callFiltro = () => {
-        window.alert("call filtro");
-    };
+    // const callFiltro = () => {
+    //     window.alert("call filtro");
+    // };
 
     return (
         <>

@@ -1,7 +1,6 @@
 import Families from "./Families";
 
 const Presentation = () => {
-    console.log('Me llamaron');
     return (
         <>
             <div className="container container-lg">
