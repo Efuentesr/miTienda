@@ -1,6 +1,6 @@
 import Families from "./Families";
 
-const Presentation = () => {
+const Home = () => {
     return (
         <>
             <div className="container container-lg">
@@ -14,17 +14,11 @@ const Presentation = () => {
                             con nosotros a traves de whatsapp al numero 9777888765, estaremos gustosos
                             de acompañarlo.
                         </p>
-                        {/* <div className="header-btn">
-                            <a href="./comprar.html" className="btn btn-primary text-light"
-                            >Comprar</a>
-                            <a href="#offers" className="btn btn-secondary">Inicio</a>
-                        </div> */}
                     </div>
                     <Families />
                 </header>
             </div>
-            {/* {prodFamilies.mostrarFamilias()} */}
         </>
     )
 }
-export default Presentation;
+export default Home;

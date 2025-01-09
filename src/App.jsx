@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Nav from "./components/Nav";
-import Presentation from "./components/Presentation";
+import Home from "./components/Home";
 // import Families from "./components/Families";
-import Login from "./LogIn";
+import Login from "./components/LogIn";
 import Register from './Register'
-import Comprar from './Comprar'
+import Comprar from './components/Comprar'
 import PrdList from "./PrdList";
 import Orders from "./data/Orders";
 
@@ -20,11 +20,11 @@ const App = () => {
       <Nav />  
       <div>
         <Routes>
-          <Route path="/" element={<Presentation />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registro" element={<Register />} />
+          <Route path="/" element={<Home />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/Comprar" element={<Comprar />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registro" element={<Register />} />
         </Routes>  
   
       </div>

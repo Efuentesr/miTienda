@@ -40,14 +40,13 @@ const Nav = () => {
                             <Link className="nav-link" to="/comprar">Comprar</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/login" className="nav-link">Ingreso</Link>
+                            <Link className="nav-link" to="/orders">Ordenes</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/login" className="nav-link">Login</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/registro">Registro</Link>
-                        </li>
-                        <li className="nav-item">
-                            {/* <a className="nav-link" href="./orders.html">Ordenes</a> */}
-                            <Link className="nav-link" to="/orders">Ordenes</Link>
                         </li>
                     </ul>
                 </div>

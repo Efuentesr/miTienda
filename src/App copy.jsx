@@ -4,11 +4,11 @@ import React, { useState } from "react";
 // import Boton from "./Boton";
 
 import Nav from "./components/Nav";
-import Presentation from "./components/Presentation";
+import Presentation from "./components/Home";
 import Families from "./Families";
-import Login from "./LogIn";
+import Login from "./components/LogIn";
 import Register from './Register'
-import Comprar from './Comprar'
+import Comprar from './components/Comprar'
 import PrdList from "./PrdList";
 
 import "./estilos.css";
