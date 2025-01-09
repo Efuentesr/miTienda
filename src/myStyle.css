@@ -8,9 +8,9 @@ body {
 
 
 :root {
-  /* --primary-color: rgba(176, 55, 59, 0.872); */
+  --primary-color: rgba(176, 55, 59, 0.872);
   /* --primary-color: #7633f9; */
-  --primary-color: #03346E;
+  /* --primary-color: #03346E; */
   --secondary-color: #ff9800;
   --transition: 0.2s ease-in-out;
   --html-color: #e34c26;

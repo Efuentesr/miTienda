@@ -86,7 +86,7 @@ const Nav = ({ setView }) => {
                         <a className="nav-link" href="./orders.html">Ordenes</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="./cart.html">Canasta</a>
+                        <a className="nav-link" href="#" onClick={() => setView('prdList')}>PrdList</a>
                     </li>
                     </ul>
                 </div>
