@@ -14,7 +14,7 @@ body {
   --secondary-color: #ff9800;
   --transition: 0.2s ease-in-out;
   --html-color: #e34c26;
-  --css-color: #0949d4;
+  --css-color: #c9cbce;
   --js-color: #f0db4f;
 }
 
@@ -33,6 +33,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .header-text {
@@ -160,6 +161,13 @@ a {
 #endSession {
   display: none;
 }
+#none-display {
+  display: none;
+}
+#block-display {
+  display: block;
+}
+
 
 
 
