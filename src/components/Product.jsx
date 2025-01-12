@@ -9,11 +9,7 @@ const Product = ({product}) => {
         <div className="prd-card">
             <div className="prd-card-detail">
                 <div className="prd-card-img">
-                    <img
-                    src={image}
-                    alt="Product Image"
-                    style={{width: "100%", height: "100%", objectFit: "cover"}}
-                    />
+                    <img className="prd-img" src={image} alt="Product Image" />
                 </div>
                 <div className="prd-card-descr">
                     <span className="prd-summary"> { description } </span>
