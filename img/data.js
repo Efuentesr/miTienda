@@ -1,4 +1,4 @@
-export const products = [
+const products = [
     {
         "Code": "81l7IXKfI8L._AC_UL320_",
         "Description": "CoBak Case for Remarkable Paper Pro-with Pen Holder, Nib Storage, Ergonomic Design for Enhanced Writing Comfort - The Perfect Choice for Remarkable Paper Pro Case with Pen Holder, Emerald\n",
@@ -312,7 +312,7 @@ export const products = [
         "price": "22.79"
     },
     {
-        "Code": "713sKEvhMgL._AC_UY218_",
+        "Code": "713sKEvhMgL._AC_UY218_.jpg",
         "Description": "JavaScript Crash Course: A Hands-On, Project-Based Introduction to Programming\nby Nick Morgan  | Mar 5, 2024",
         "category": "books",
         "points": "4.40",
@@ -320,7 +320,7 @@ export const products = [
         "price": "30.48"
     },
     {
-        "Code": "91vuSBT14BL._AC_UY218_",
+        "Code": "91vuSBT14BL._AC_UY218_.jpg",
         "Description": "Head First JavaScript Programming: A Brain-Friendly Guide\nPart of: Head First (44 books)  | by Eric Freeman and Elisabeth Robson  | May 6, 2014",
         "category": "books",
         "points": "4.60",
@@ -328,7 +328,7 @@ export const products = [
         "price": "57.77"
     },
     {
-        "Code": "818tQK0PVdL._AC_UY218_",
+        "Code": "818tQK0PVdL._AC_UY218_.jpg",
         "Description": "Django 5 By Example - Fifth Edition: Build powerful and reliable Python web applications from scratch\nby Antonio Mel\u00e9  | Apr 30, 2024\n",
         "category": "books",
         "points": "4.70",
