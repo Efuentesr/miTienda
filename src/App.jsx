@@ -18,8 +18,12 @@ const App = () => {
   const [user, setUser] = useState('nobody@nowhere.com')
   return (
     <Router>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Nav user={user}/>  
-      <div>
+      <div           style={{
+            flex: 1, // Ocupa el espacio restante
+            overflowY: 'auto', // Permite el desplazamiento vertical
+          }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/orders" element={<Orders />} />
@@ -28,6 +32,7 @@ const App = () => {
           <Route path="/registro" element={<Register  user={user} setUser={setUser} />} />
         </Routes>  
   
+      </div>
       </div>
     </Router>
   )
