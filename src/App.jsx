@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/Comprar" element={<Comprar />} />
           <Route path="/login" element={<Login user={user} setUser={setUser}/>} />
-          <Route path="/registro" element={<Register />} />
+          <Route path="/registro" element={<Register  user={user} setUser={setUser} />} />
         </Routes>  
   
       </div>

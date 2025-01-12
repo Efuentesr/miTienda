@@ -173,17 +173,21 @@ a {
 
 .prd-card {
   border: 1px solid #d5d9d9;
-  width: 23rem;
-  height: 40.3rem;
+  /* width: 23rem;
+  height: 40.3rem; */
+  width: 18rem;
+  height: 32rem;
   border-radius: 6px;
 }
 
 .prd-card-detail {
-  height: 36.1rem;
+  /* height: 36.1rem; */
+  height: 28.9rem;
 }
 
 .prd-card-img {
-  max-height: 25rem;
+  /* max-height: 25rem; */
+  max-height: 20rem;
   font-size: 14px;
   background-color: rgba(0, 0, 0, 0.03);
   padding: 12px;
@@ -192,13 +196,15 @@ img {
   mix-blend-mode: multiply;
 }
 .prd-card-descr {
-  height: 14rem;
+  /* height: 14rem; */
+  height: 11.2rem;
   display: flex;
   flex-direction: column;
 }
 
 .prd-summary {
-  height: 3.9rem;
+  /* height: 3.9rem; */
+  height: 3.12rem;
   font-size: 1rem;
   display: -webkit-box;
   line-clamp: 3;
@@ -211,7 +217,8 @@ img {
 }
 
 .prd-card-button {
-  height: 4rem;
+  /* height: 4rem; */
+  height: 3.2rem;
   display: flex;
   align-items: center;
   justify-content: center;

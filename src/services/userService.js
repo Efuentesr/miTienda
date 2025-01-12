@@ -16,7 +16,17 @@ const requestUsers = async () => {
     }
   }
 
+const createUser = async (newUser) => {
+  try {
+    const response = await axios.post(URL, newUser)
+    console.log("response ", response);
+    return response.data;
+  } catch (error) {
+    throw error
+  }
+}
   
   export {
     requestUsers,
+    createUser
   }

@@ -1,4 +1,8 @@
+import { products } from '../data/products.js';
+
+
 const Comprar = () => {
+  console.log(products)
   return(
   <>
     <div id="filter-and-order" style={{display: "flex", flexDirection: "row", backgroundColor: "var(--css-color)"}}>
