@@ -8,9 +8,9 @@ import { createUser } from "../services/userService";
 const Register = ({user, setUser}) => {
   const [users, setUsers] = useState([]);
   const [userRecord, setUserRecord] = useState({
-    nombre:"",
-    descripcion:"",
-    precio:""
+    email:"",
+    name:"",
+    password:""
   })
 
 
@@ -28,21 +28,22 @@ const Register = ({user, setUser}) => {
       }
 
       // Obtener los valores de los campos
-      const name = event.target.name.value.trim();
       const email = event.target.email.value.trim();
+      const name = event.target.name.value.trim();
       const password = event.target.password.value.trim();
       const confirmPassword = event.target.confirmPassword.value.trim();
 
-
-      if (!name) {
-        alert("El campo nombre es obligatorio.");
-        return;
-      }
 
       if (!email) {
         alert("El campo Email es obligatorio.");
         return;
       }
+      if (!name) {
+        alert("El campo nombre es obligatorio.");
+        return;
+      }
+
+
       if (!password) {
         alert("El campo Password es obligatorio.");
         return;
@@ -106,17 +107,8 @@ const Register = ({user, setUser}) => {
         <h1 style={{textAlign: "center", margin: "2rem auto"}} className="title">Registro de Usuario</h1>
         <div className="card p-2">
           <div className="card-body">
-            <form action="./index.html" id="register">
-              <div className="form-group">
-                <label htmlFor="name">Nombre</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  className="form-control"
-                  placeholder="Ingrese su nombre completo"
-                />
-              </div>
+            <form form id="logIn" onSubmit={manejarSubmit}>
+
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
@@ -127,6 +119,18 @@ const Register = ({user, setUser}) => {
                   placeholder="Ingrese su email"
                 />
               </div>
+
+              <div className="form-group">
+                <label htmlFor="name">Nombre</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="form-control"
+                  placeholder="Ingrese su nombre completo"
+                />
+              </div>
+
               <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input
