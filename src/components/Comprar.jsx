@@ -1,5 +1,5 @@
-import { products } from '../data/products.js';
 import Product from './Product.jsx';
+import { products } from '../data/products.js';
 
 
 const Comprar = () => {

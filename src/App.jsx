@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Login from './components/LogIn.jsx'
 import Register from './components/Register.jsx'
 import Comprar from './components/Comprar'
+import Cart from "./components/Cart";
 import PrdList from "./PrdList";
 import Orders from "./components/Orders";
 
@@ -26,8 +27,9 @@ const App = () => {
           }}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/comprar" element={<Comprar />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Orders />} />
-          <Route path="/Comprar" element={<Comprar />} />
           <Route path="/login" element={<Login user={user} setUser={setUser}/>} />
           <Route path="/registro" element={<Register  user={user} setUser={setUser} />} />
         </Routes>  
