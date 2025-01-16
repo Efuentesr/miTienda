@@ -1,6 +1,7 @@
 
 const Product = ({product}) => {
-    const image = `../img/${product["Code"]}.jpg`
+    // const image = `../img/${product["Code"]}.jpg`
+    const image = `https://ossisvnlzipyilifvydn.supabase.co/storage/v1/object/public/miTienda/prd-images/${product["Code"]}.jpg`
     const description = product["Description"]
     const stars = `${product["points"]} out of 5 stars`
     const price = `$${product["price"]}`

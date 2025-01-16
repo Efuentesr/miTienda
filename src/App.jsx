@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -17,8 +17,8 @@ import "./nav.css";
 const App = () => {
   const [user, setUser] = useState('nobody@nowhere.com')
   return (
-    <Router>
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <BrowserRouter>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Nav user={user}/>  
       <div           style={{
             flex: 1, // Ocupa el espacio restante
@@ -34,7 +34,7 @@ const App = () => {
   
       </div>
       </div>
-    </Router>
+    </BrowserRouter>
   )
 }
 
