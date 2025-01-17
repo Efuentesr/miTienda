@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({user}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false); // Estado para el submenú
+
     // Ref para manejar el ícono del botón de menú
     const iconRef = useRef(null);
     const toggleMenu = () => {
@@ -17,8 +19,13 @@ const Nav = ({user}) => {
                 iconRef.current.classList.add("fa-times");
             }
         }
-    };
 
+
+
+    };
+    const toggleAccountMenu = () => {
+        setIsAccountMenuOpen((prev) => !prev);
+    };
     return (
         <>
             <nav className={`navbar bg-primary text-light ${isMenuOpen ? "showNavbar" : ""}`}>
@@ -44,12 +51,28 @@ const Nav = ({user}) => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/orders">Ordenes</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to="/login" className="nav-link">Login</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/registro">Registro</Link>
+                        </li> */}
+                        <li className="nav-item dropdown">
+                            <button style={{pading: "0px", margin: "0px", fontWeight:"600"}}className="nav-link btn-dropdown" onClick={toggleAccountMenu}>
+                                Account
+                            </button>
+                            {isAccountMenuOpen && (
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <Link className="dropdown-item" to="/login">Login</Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/registro">Registro</Link>
+                                    </li>
+                                </ul>
+                            )}
                         </li>
+
                     </ul>
                 </div>
             </nav>

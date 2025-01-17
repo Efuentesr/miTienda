@@ -16,7 +16,7 @@ export const cartProducts
         "points": "4.6 ",
         "sold": "200.00",
         "price": "189.99",
-        "qtyToBuy": "1"
+        "qtyToBuy": "2"
     },
     {
         "Code": "71W8woBwjVL._AC_UL320_",
@@ -25,7 +25,7 @@ export const cartProducts
         "points": "",
         "sold": "",
         "price": "1100.00",
-        "qtyToBuy": "1"
+        "qtyToBuy": "3"
     },
     {
         "Code": "61gKkYQn6lL._AC_UL320_",
@@ -34,6 +34,6 @@ export const cartProducts
         "points": "4.4 ",
         "sold": "9000.00",
         "price": "279.99",
-        "qtyToBuy": "1"
+        "qtyToBuy": "4"
     }
 ];
