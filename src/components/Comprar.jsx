@@ -3,19 +3,12 @@ import { BsArrowUpCircleFill} from 'react-icons/bs';
 
 import Product from './Product.jsx';
 import { products } from '../data/products.js';
+import Filtro from './Filtro.jsx';
 
 
 const Comprar = () => {
-  const [goTop, setGoTop] = useState(true);
   const headRef = useRef();
-  
-  const scrollPosition = () =>{
-    if ( document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      setGoTop(true);
-    } else {
-      setGoTop(false);
-    }
-  }
+  const [showFiltro, setShowFiltro] = useState(false)
 
   const goToTop = () => {
     headRef.current.scrollIntoView();
@@ -28,7 +21,7 @@ const Comprar = () => {
       id="filter-and-order" 
       style={{display: "flex", flexDirection: "row",  justifyContent: 'center'}}
     >
-        <b className='btn btn-secondary'>Filtros</b>
+        <b className='btn btn-secondary' onClick={()=> setShowFiltro(true)}>Filtros</b>
     </div>
     <div className="lista-prod" >
         <BsArrowUpCircleFill 
@@ -41,11 +34,9 @@ const Comprar = () => {
           </div>
         ))
         }
-        {/* <BsArrowUpCircleFill className="goTop" /> */}
     </div>
-    {
-      // goTop && <BsArrowUpCircleFill className="goTop" />
-    }
+    {/* Modal  */}
+    { showFiltro && <Filtro  setShowFiltro={setShowFiltro} />}
   </>
 )}
 

@@ -1,8 +1,8 @@
-import { families } from "./data/prodFamilies";
+import { families } from "../data/prodFamilies";
 
-const Families = () => {
+const Filtro = ({setShowFiltro}) => {
     return (
-        <div id="mostrar-filtro" >
+        <div id="mostrar-filtro-fijo" >
             <h3 id="cardTitle">Familias de Productos</h3>
             <div id="divMostrar">
                 {families.map((family, index) => (
@@ -25,9 +25,15 @@ const Families = () => {
                     </div>
                 ))}
             </div>
-            <button id="btn-filtro" className="btn btn-primary">Enviar</button>
+            <input type="text" style={{ marginBottom: "1rem", padding: "0px" }}/>
+
+            <div >
+                <button id="btn-filtrar" className="btn btn-primary"  onClick={()=> setShowFiltro(false)}>Enviar</button>
+                <button id="btn-cancelar" className="btn btn-secondary"  onClick={()=> setShowFiltro(false)}>Cancelar</button>
+             </div>
+            
         </div>
     );
 };
 
-export default Families;
+export default Filtro;
