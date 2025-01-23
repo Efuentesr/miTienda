@@ -16,6 +16,7 @@ import "./estilos.css";
 import "./myStyle.css";
 import "./nav.css";
 import { UserContextProvider } from "./contexts/UserContext.jsx";
+import CloseSession from "./components/CloseSession.jsx";
 
 const App = () => {
   // const [user, setUser] = useState('nobody@nowhere.com')
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/orders" element={<Orders />} />
               {/* <Route path="/login" element={<Login user={user} setUser={setUser}/>} /> */}
               <Route path="/login" element={<Login />} />
+              <Route path="/logout" element={<CloseSession />} />
               <Route path="/registro" element={<Register />} />
             </Routes>  
       

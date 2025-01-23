@@ -99,10 +99,13 @@ const Login = () => {
                     placeholder="Ingrese su password"
                   />
                 </div>             
-                <div classn="form-group">
-                    <button name="logout" id={`${!userEmail ? "none-display" : "display"}`} className="btn btn-secondary" type="submit">Logout</button>
-                    <button name="login" id={`${userEmail ? "none-display" : "display"}`} className="btn btn-primary" type="submit">Login</button> 
-                    <button name="register" id={`${userEmail ? "none-display-02" : "ok-display"}`} className="btn btn-primary" type="submit">Registrarse</button> 
+                <div className="form-group">
+                    {/* <button name="logout" id={`${!userEmail ? "none-display" : "display-01"}`} className="btn btn-secondary" type="submit">Logout</button> */}
+                    { userEmail && <button name="logout" className="btn btn-secondary" type="submit">Logout</button> }
+                    {/* <button name="login" id={`${userEmail ? "none-display" : "display-02"}`} className="btn btn-primary" type="submit">Login</button>  */}
+                    { !userEmail && <button name="login" className="btn btn-primary" type="submit">Login</button> }
+                    {/* <button name="register" id={`${userEmail ? "none-display-02" : "display-03"}`} className="btn btn-primary" type="submit">Registrarse</button>  */}
+                    { !userEmail && <button name="register"  className="btn btn-primary" type="submit">Registrarse</button> }
                 </div>
               </form>
             </div>

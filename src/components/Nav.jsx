@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { UserContext } from "../contexts/UserContext";
 
 const Nav = () => {
-    const { userEmail } = useContext(UserContext);
+    const { userEmail, closeSession } = useContext(UserContext);
+    const handleCloseSession = async() => {
+        await closeSession();
+      }
+  
     // console.log('usuario: ', user);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false); // Estado para el submenú
@@ -62,17 +66,23 @@ const Nav = () => {
                             <Link className="nav-link" to="/registro">Registro</Link>
                         </li> */}
                         <li className="nav-item dropdown">
-                            <button style={{pading: "0px", margin: "0px", fontWeight:"600"}}className="nav-link btn-dropdown" onClick={toggleAccountMenu}>
+                            <button style={{pading: "0px", margin: "0px", fontWeight:"600", marginRight: "2rem"}}className="nav-link btn-dropdown" onClick={toggleAccountMenu}>
                                 Account
                             </button>
                             {isAccountMenuOpen && (
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link className="dropdown-item" to="/login">Login</Link>
+                                        {!userEmail && <Link className="dropdown-item" to="/login">Login</Link>}
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to="/registro">Registro</Link>
+                                        {!userEmail && <Link className="dropdown-item" to="/registro">Registro</Link>}
                                     </li>
+
+                                    <li>
+                                        {userEmail && <Link className="dropdown-item" to="/logout">Logout</Link>}
+                                    </li>
+
+
                                 </ul>
                             )}
                         </li>

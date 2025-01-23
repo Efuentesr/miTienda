@@ -1,10 +1,12 @@
-import { useState, useEffect, useRef }  from "react";
+import { useState, useEffect, useRef, useContext }  from "react";
 import { cartProducts } from '../data/cartProducts.js';
 import ProductInCart from './ProductInCart.jsx';
 import { useNavigate } from "react-router-dom";
 import { BsArrowUpCircleFill} from 'react-icons/bs';
+import { UserContext } from "../contexts/UserContext.jsx";
 
 const Cart = () => {
+  const {userEmail } = useContext(UserContext);
   const headRef = useRef();
   const goToTop = () => {
     headRef.current.scrollIntoView();
@@ -33,7 +35,8 @@ const Cart = () => {
       id="checkout" 
       style={{display: "flex", flexDirection: "row",  justifyContent: 'center'}}
     >
-        <b className='btn btn-secondary' onClick={() => navigate("/checkout")}>Check Out</b>
+        {userEmail && <button className='btn btn-secondary' onClick={() => navigate("/checkout")}>Check Out</button>}
+        {!userEmail && <button className='btn btn-primary'>No Check Out</button>}
     </div>
 
     {/* <div className="lista-prod" > */}
