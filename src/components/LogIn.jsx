@@ -45,11 +45,11 @@ const Login = () => {
 
         try {
           const result = await signInUser(email, password)
-          console.log("result: ", result.user.email)
-          toast.success(`${result.user.email} Ingreso exitosamente!`, {
-            onClose: () => {
-              navigate('/')
-            }
+            console.log("result: ", result.user.email)
+            toast.success(`${result.user.email} Ingreso exitosamente!`, {
+              onClose: () => {
+                navigate('/')
+              }
           })
         } catch (error) {
           console.log(error);

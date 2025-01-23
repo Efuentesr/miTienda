@@ -3,6 +3,7 @@ const families = [
         "Desktops",
         "Tablets",
         "Mobiles",
-        "Accesorios"
+        "Accesorios",
+        "Libros"
     ]
 export { families }
