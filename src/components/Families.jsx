@@ -7,7 +7,7 @@ const Families = () => {
     return (
         <div>
         {/* <div id="mostrar-filtro" > */}
-            <h2 id="cardTitle" style={{marginBottom: "2rem"}}>Familias de Productos</h2>
+            {/* <h2 id="cardTitle" style={{marginBottom: "1rem"}}>Familias de Productos</h2> */}
             <div className="grid-families" >
                 {families.map((family, index) => (
                     <div

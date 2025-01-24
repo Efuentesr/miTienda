@@ -6,14 +6,14 @@ const ShowFamily = ({family, familyImg}) => {
     return (
         <>
         <div className="show-family">
-             <div style={{  Height: "13rem", fontSize: "11.2px", backgroundColor: "rgba(0, 0, 0, 0.03)", padding: "12px"}}>
+             <div style={{  height: "13rem", fontSize: "11.2px", backgroundColor: "rgba(0, 0, 0, 0.03)", padding: "12px"}}>
                     <img 
                         style={{maxHeight: "11rem", maxwidth: "17rem", width: "100%", height: "100%", objectFit: "contain", mixBlendMode: "multiply"}} 
                         src={image} 
                         alt="Family Image" 
                     />
             </div>
-            <div style={{height:"3rem", alignContent: "center"}}>
+            <div style={{height:"3rem", textAlign: "center", alignContent: "center"}}>
                 <span>{family}</span>
             </div>
 
