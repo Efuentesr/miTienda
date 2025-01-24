@@ -13,7 +13,7 @@ const Families = () => {
                     <div
                         key={index}
                         id={`div${family}`}
-                        style={{ display: "flex", margin: "0px", padding: "0px", gap: "5px" }}
+                        style={{ display: "flex", margin: "0px auto", padding: "0px", gap: "5px" }}
                     > 
                         <ShowFamily family={family} familyImg={familiesImg[family]} />
                     </div>
