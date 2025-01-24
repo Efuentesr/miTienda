@@ -1,21 +1,29 @@
 import { families } from "../data/prodFamilies";
 import { familiesImg } from "../data/prodFamiliesImg";
-import ShowFamily from "./ShowFamily";
 
 const Families = () => {
-    // console.log(familiesImg)
+    console.log(familiesImg)
     return (
-        <div>
-        {/* <div id="mostrar-filtro" > */}
-            <h2 id="cardTitle" style={{marginBottom: "2rem"}}>Familias de Productos</h2>
-            <div style={{display:"grid", gridTemplateColumns: "repeat(4, 1fr)", gap:"10px"}}>
+        <div id="mostrar-filtro" >
+            <h3 id="cardTitle">Familias de Productos</h3>
+            <div id="divMostrar">
                 {families.map((family, index) => (
                     <div
                         key={index}
                         id={`div${family}`}
                         style={{ display: "flex", margin: "0px", padding: "0px", gap: "5px" }}
                     >
-                        <ShowFamily family={family} familyImg={familiesImg[family]} />
+                        {/* <input
+                            id={family}
+                            type="checkbox"
+                            style={{ margin: "0px", padding: "0px" }}
+                        /> */}
+                        <label
+                            htmlFor={family}
+                            style={{ margin: "0px", padding: "0px" }}
+                        >
+                            {family}
+                        </label>
                     </div>
                 ))}
             </div>
