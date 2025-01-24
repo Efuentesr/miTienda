@@ -3,7 +3,7 @@ import Families from "./Families";
 const Home = () => {
     return (
         <>
-            <div className="container container-lg">
+            <div className="container container-sm container-md container-lg">
                 <header id="header" className="header d-flex">
                     <div className="header-content mb-2">
                         <h1 className="title header-title fs-xxl mb-3">
@@ -17,7 +17,10 @@ const Home = () => {
                     </div>
                     <Families />
                 </header>
+                {/* <Families /> */}
+
             </div>
+
         </>
     )
 }

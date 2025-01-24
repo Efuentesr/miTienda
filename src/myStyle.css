@@ -377,9 +377,13 @@ button {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-columns: repeat(auto-fit, minmax(288, 1fr)); */
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1frd; */
+  /* gap: 10px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 
-  gap: 10px;
 }
 
 @media screen and (max-width: 576px) {

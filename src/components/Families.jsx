@@ -8,13 +8,13 @@ const Families = () => {
         <div>
         {/* <div id="mostrar-filtro" > */}
             <h2 id="cardTitle" style={{marginBottom: "2rem"}}>Familias de Productos</h2>
-            <div style={{display:"grid", gridTemplateColumns: "repeat(4, 1fr)", gap:"10px"}}>
+            <div className="grid-families" >
                 {families.map((family, index) => (
                     <div
                         key={index}
                         id={`div${family}`}
                         style={{ display: "flex", margin: "0px", padding: "0px", gap: "5px" }}
-                    >
+                    > 
                         <ShowFamily family={family} familyImg={familiesImg[family]} />
                     </div>
                 ))}
