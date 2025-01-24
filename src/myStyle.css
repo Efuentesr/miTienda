@@ -387,7 +387,7 @@ button {
 
 }
 
- @media screen and (max-width: 576px) {
+ /* @media screen and (max-width: 576px) {
   .grid-families {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -411,4 +411,4 @@ button {
   .grid-families {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
+} */

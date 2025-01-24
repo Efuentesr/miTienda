@@ -15,9 +15,9 @@ const Home = () => {
                             de acompañarlo.
                         </p>
                     </div>
-                    <Families />
+                    {/* <Families /> */}
                 </header>
-                {/* <Families /> */}
+                <Families />
 
             </div>
 
