@@ -10,23 +10,36 @@ const UserContextProvider = ({ children }) => {
     // Registrar usuario en supabase
     const signUpUser = async (email, password) => {
         const { data, error } = await supabase.auth.signUp({ email, password })
-        if(data) {
-            return data; //resolve
+        // console.log(`data: ${data} ***** error: ${error}`)
+        // console.log("data es null", data === null)
+        if (error) {
+            // console.log("queu tipo es el errror", {...error})
+            throw error.code;
         } else {
-            console.log(error)
-            throw error; //reject
+            return data;
         }
+ 
+
+
+        // if(data) {
+        //     return data; //resolve
+        // } else {
+        //     console.log(error)
+        //     throw error; //reject
+        // }
+
+
     }
 
     // 
     const signInUser = async (email, password) => {
+        // console.log(`signInUser email: ${email} Password: ${password}`)
         const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-        if(data) {
-            console.log("data: ",data)
-            return data; //resolve
+        if (error) {
+            // console.log("queu tipo es el errror", {...error})
+            throw error.code;
         } else {
-            console.log(error)
-            throw error; //reject
+            return data;
         }
     }
 
