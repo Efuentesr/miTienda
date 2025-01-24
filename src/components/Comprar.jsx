@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { BsArrowUpCircleFill} from 'react-icons/bs';
 
 import Product from './Product.jsx';
@@ -29,7 +29,7 @@ const Comprar = () => {
           onClick={goToTop}
         />
         { products.map((product, i) => (
-          <div key={i}>
+          <div key={i} style={{margin: "0 auto"}}>
             <Product product={product}/>
           </div>
         ))

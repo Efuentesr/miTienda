@@ -23,7 +23,7 @@ a {
 }
 
 .header {
-  height: 80vh;
+  /* height: 80vh; */
   animation: fadeInHeader 1s ease-in-out;
   flex-direction: column;
   text-align: center;
@@ -190,9 +190,8 @@ a {
 
 
 .prd-card {
+  /* justify-content: center; */
   border: 1px solid #d5d9d9;
-  /* width: 23rem;
-  height: 40.3rem; */
   width: 18rem;
   height: 30rem;
   border-radius: 6px;
@@ -276,11 +275,13 @@ button {
 
 .lista-prod {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(288, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   gap: 1rem;
   padding: 1rem;
+  justify-content: space-around;
 }
 
+/* 
 @media screen and (max-width: 576px) {
   .lista-prod {
     grid-template-columns: 1fr;
@@ -305,7 +306,7 @@ button {
   .lista-prod {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
+} */
 
 * {
   margin: 0px;
@@ -374,19 +375,19 @@ button {
   border: 1px solid #d5d9d9;
 }
 .grid-families {
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-columns: repeat(auto-fit, minmax(288, 1fr)); */
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1frd; */
   /* gap: 10px; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(288, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   gap: 1rem;
   padding: 1rem;
 
 }
 
-@media screen and (max-width: 576px) {
+ @media screen and (max-width: 576px) {
   .grid-families {
     grid-template-columns: 1fr;
     justify-content: center;
