@@ -32,22 +32,35 @@ const ProductInCart = ({product}) => {
                 <div className="prd-card-img">
                     <img className="prd-img" src={image} alt="Product Image" />
                 </div>
-                <div className="prd-card-descr" style={{maxWidth: "18rem"}}>
-                    <span className="prd-summary"> { description } </span>
-                    <div className='prd-price'> Unit Price{ price } </div>
+                {/* <div className="prd-card-descr" style={{maxWidth: "18rem"}}> */}
+                <div style={{maxWidth: "18rem", margin: "0 1rem"}}>
+                    <span  style={{fontSize:"0.8rem"}}> { description } </span>
+                    <div style={{margin:"1rem 0", fontWeight: "600"}}> Unit Price: { price } </div>
                 </div>
 
                 <div style={{display: "flex", flexDirection: "column", marginRight: "1rem"}}>
-                    <span>Qty {qty}</span>
-                    <div style={{display: "flex", flexDirection: "row"}}>
-                        <button onClick={substractQty} style={{padding: "0 0.5rem", marginRight: "1rem"}}> - </button>
+                    <div style={{textAlign: "center",  marginBottom: "0.5rem", fontWeight:"600"}}>
+                        <span >Quantity</span>
+                    </div>
+                    <div style={{display: "flex", flexDirection: "row",  }}>
+                        <button onClick={substractQty} style={{padding: "0 0.5rem", }}> - </button>
+                        <span  style={{padding: "0 0.5rem", margin: "0 auto"}}>{qty}</span>
                         <button onClick={addQty} style={{padding: "0 0.5rem"}}> + </button>
                     </div>
                 </div>
+                <div style={{display: "flex", flexDirection: "column", marginRight: "1rem"}}>
+                    <div style={{textAlign: "center",  marginBottom: "0.5rem", fontWeight:"600"}}>
+                        <span >Subtotal</span>
+                    </div>
+                    <div style={{display: "flex", flexDirection: "row",  }}>
+                        <span  style={{padding: "0 0.5rem", margin: "0 auto"}}>{qty*Number(product.price)}</span>
+                    </div>
+                </div>
 
-                <div>
+
+                {/* <div>
                     Product Total Price: {qty*Number(product.price)}
-                </div> 
+                </div>  */}
 
             </div>
         </div>
