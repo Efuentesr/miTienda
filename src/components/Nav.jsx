@@ -42,7 +42,7 @@ const Nav = () => {
                             <span className="logo">MiTienda</span>
                         </Link>
                         {/* <span style={{marginLeft: "10px"}}>User: {user}</span> */}
-                        <span style={{marginLeft: "10px"}}>User: { userEmail} </span>
+                        <span style={{marginLeft: "0.5rem", fontSize: "0.9rem"}}>{ userEmail} </span>
                     </div>
                     <button id="navbar-toggler" className="navbar-toggler btn btn-sm btn-close-white" onClick={toggleMenu}>
                         <i id="efrm" className="fa-solid fa-bars" ref={iconRef}></i>

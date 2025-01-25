@@ -2,7 +2,9 @@ import React from 'react'
 
 const Orders = () => {
   return (
-    <div>Orders</div>
+    <div  style={{  position: "fixed", top: "50%",  left: "40%"}}>
+        <h1>Orders ...........</h1>
+    </div>
   )
 }
 
