@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { BsArrowUpCircleFill} from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 import Product from './Product.jsx';
 import { products } from '../data/products.js';
@@ -7,6 +8,7 @@ import Filtro from './Filtro.jsx';
 
 
 const Comprar = () => {
+  
   const headRef = useRef();
   const [showFiltro, setShowFiltro] = useState(false)
 
@@ -30,7 +32,14 @@ const Comprar = () => {
         />
         { products.map((product, i) => (
           <div key={i} style={{margin: "0 auto"}}>
-            <Product product={product}/>
+            {/* <Product product={product}/> */}
+
+            <Link to={`/product/${i}`}>
+
+              <Product product={product}/>
+
+            </Link>
+
           </div>
         ))
         }

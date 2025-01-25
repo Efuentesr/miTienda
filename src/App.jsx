@@ -17,6 +17,7 @@ import "./myStyle.css";
 import "./nav.css";
 import { UserContextProvider } from "./contexts/UserContext.jsx";
 import CloseSession from "./components/CloseSession.jsx";
+import ProductDetail from "./components/ProductDetail.jsx";
 
 const App = () => {
   // const [user, setUser] = useState('nobody@nowhere.com')
@@ -33,6 +34,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/comprar" element={<Comprar />} />
+              <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<CheckOut />} />
               <Route path="/orders" element={<Orders />} />
