@@ -11,12 +11,7 @@ const CheckoutPage = () => {
   const cart = [...cartProducts];
   console.log(cart)
   
-  // const newProduct = {
-  //   id: id,
-  //   name: nombre,
-  //   price: precio_oferta,
-  //   quantity,
-  // };
+
 
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">

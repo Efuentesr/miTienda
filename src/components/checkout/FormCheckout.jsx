@@ -11,7 +11,7 @@ const FormCheckout = () => {
   } = useForm();
 
   const getDataSubmit = (data) => {
-    console.log(data);
+    console.log('data: ',data);
   };
 
   return (

@@ -13,7 +13,7 @@ const TableCart = ({ cart }) => {
           {cart
             ? cart.map((prod, i) => (
                 <tr key={i} className="border-b-2">
-                  <td className="px-6 py-4">{`${prod.Description.substring(1,35)}`}</td>
+                  <td className="px-6 py-4">{`${prod.Description.substring(1,34)}`}</td>
                   <td className="px-6 py-4">{`S/ ${prod.price}`}</td>
                   <td className="px-6 py-4">{`${prod.qtyToBuy} Unidades`}</td>
                   <td className="px-6 py-4">{`S/ ${(
