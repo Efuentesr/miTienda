@@ -11,6 +11,7 @@ import Cart from "./components/Cart";
 import PrdList from "./PrdList";
 import Orders from "./components/Orders";
 import CheckOut from "./components/CheckOut.jsx";
+import CheckoutPage from "./components/CheckoutPage.jsx";
 
 import "./estilos.css";
 import "./myStyle.css";
@@ -36,7 +37,8 @@ const App = () => {
               <Route path="/comprar" element={<Comprar />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<CheckOut />} />
+              {/* <Route path="/checkout" element={<CheckOut />} /> */}
+              <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/orders" element={<Orders />} />
               {/* <Route path="/login" element={<Login user={user} setUser={setUser}/>} /> */}
               <Route path="/login" element={<Login />} />
