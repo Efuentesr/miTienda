@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 // import { CartContext } from "../context/CartContext";
-import TableCart from "../components/Checkout/TableCart";
-import FormCheckout from "../components/Checkout/FormCheckout";
+import TableCart from "../components/checkout/TableCart";
+import FormCheckout from "../components/checkout/FormCheckout";
 
 import { cartProducts } from "../data/cartProducts";
 
