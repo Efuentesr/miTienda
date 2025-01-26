@@ -57,7 +57,8 @@ const Nav = () => {
                             <Link className="nav-link" to="/Cart">Canasta</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/orders">Ordenes</Link>
+                            {/* <Link className="nav-link" to="/orders">Ordenes</Link> */}
+                            {userEmail && <Link className="nav-link" to="/orders">Ordenes</Link>}
                         </li>
                         {/* <li className="nav-item">
                             <Link to="/login" className="nav-link">Login</Link>

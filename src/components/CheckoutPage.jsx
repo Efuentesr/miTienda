@@ -40,7 +40,7 @@ const CheckoutPage = () => {
         <div className="col-span-1 border-2">
           <div className="flex justify-between p-6 font-bold border-b-2">
             <span>Subtotal</span>
-            <span>S/ 200.00</span>
+            <span>S/ 4,829.33</span>
           </div>
           <div className="p-6 border-b-2">
             <span className="text-xs">Código de descuento</span>
@@ -52,12 +52,12 @@ const CheckoutPage = () => {
             </div>
             <div className="flex justify-between text-sm">
               <span>Costo del delivery</span>
-              <span>S/ 5.00</span>
+              <span>S/ 10.00</span>
             </div>
           </div>
           <div className="flex justify-between p-6 font-bold">
             <span>Total</span>
-            <span>S/ 205.00</span>
+            <span>S/ 4,839.33</span>
           </div>
           <div className="px-6 mb-6">
             <button className="w-full p-4 text-white bg-black rounded-xl">
