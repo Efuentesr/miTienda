@@ -10,28 +10,14 @@ const UserContextProvider = ({ children }) => {
     // Registrar usuario en supabase
     const signUpUser = async (email, password) => {
         const { data, error } = await supabase.auth.signUp({ email, password })
-        // console.log(`data: ${data} ***** error: ${error}`)
-        // console.log("data es null", data === null)
         if (error) {
-            // console.log("queu tipo es el errror", {...error})
             throw error.code;
         } else {
             return data;
         }
  
-
-
-        // if(data) {
-        //     return data; //resolve
-        // } else {
-        //     console.log(error)
-        //     throw error; //reject
-        // }
-
-
     }
 
-    // 
     const signInUser = async (email, password) => {
         // console.log(`signInUser email: ${email} Password: ${password}`)
         const { data, error } = await supabase.auth.signInWithPassword({ email, password })
@@ -56,10 +42,8 @@ const UserContextProvider = ({ children }) => {
     useEffect(() => {
         //escuchar algún cambio en la sesión del usuario
         const { data : { subscription  }} = supabase.auth.onAuthStateChange((event, session) => {
-            // console.log("onAuthStateChange", { event, session });
-            // console.log(' Session: ', session.user.email),
             setUser(session);
-            console.log("session: ", session)
+            // console.log("session: ", session)
             if (session) {
                 setUserEmail(session.user.email)
             } else {

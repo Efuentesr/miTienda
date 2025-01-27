@@ -1,6 +1,6 @@
 
 const ShowFamily = ({family, familyImg}) => {
-    console.log("familia:", family, "familyImg: ", familyImg)
+    // console.log("familia:", family, "familyImg: ", familyImg)
     const image = `https://ossisvnlzipyilifvydn.supabase.co/storage/v1/object/public/miTienda/prd-images/${familyImg}.jpg`;
 
     return (

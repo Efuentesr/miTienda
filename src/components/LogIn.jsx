@@ -92,7 +92,7 @@ const Login = () => {
                       { !userEmail && <button name="login" className="btn btn-primary" type="submit">Login</button> }
                   </div>
                 </form>
-                { userEmail && <button name="logout" className="btn btn-secondary" onClick={handleCloseSession}>Logout</button> }
+                {/* { userEmail && <button name="logout" className="btn btn-secondary" onClick={handleCloseSession}>Logout</button> } */}
               </div>
             </div>
           </div>

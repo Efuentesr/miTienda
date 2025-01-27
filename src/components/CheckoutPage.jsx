@@ -1,17 +1,12 @@
-import { useContext } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-// import { CartContext } from "../context/CartContext";
 import TableCart from "../components/checkout/TableCart";
 import FormCheckout from "../components/checkout/FormCheckout";
 
 import { cartProducts } from "../data/cartProducts";
 
 const CheckoutPage = () => {
-
   const cart = [...cartProducts];
-  console.log(cart)
-  
-
+  // console.log(cart)
 
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
