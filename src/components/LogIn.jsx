@@ -40,8 +40,8 @@ const Login = () => {
 
     return(
       <>
-        <div className="container header" style={{display: "flex-column" }}>
-          <div className="container container-sm">
+        <div className="my-container header" style={{display: "flex-column" }}>
+          <div className="my-container container-sm">
             <h1 style={{textAlign: "center", margin: "2rem auto"}} className="title">Login</h1>
             <div className="card">
               <div className="card-body">

@@ -36,6 +36,7 @@ a {
 }
 
 .header-text {
+
   margin-bottom: 3rem;
 }
 
@@ -49,11 +50,17 @@ a {
 }
 
 .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.my-container {
+  max-width: 900px;
   margin: 0 auto;
 }
 .container.container-sm {
   max-width: 782px;
 }
+
 .container.container-md {
   max-width: 1280px;
 }

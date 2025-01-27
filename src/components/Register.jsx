@@ -74,7 +74,7 @@ const Register = () => {
     return(
       <>
         <div className="container header" style={{display: "flex-column" }}>
-          <div className="container container-sm">
+          <div className="my-container container-sm">
             <h1 style={{textAlign: "center", margin: "2rem auto"}} className="title">Registro de Usuario</h1>
             <div className="p-2 card">
               <div className="card-body">
