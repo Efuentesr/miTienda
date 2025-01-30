@@ -33,6 +33,16 @@ const Nav = () => {
     const toggleAccountMenu = () => {
         setIsAccountMenuOpen((prev) => !prev);
     };
+
+    // para cerra Toggle menu al elegir un opcion
+    const handleLinkClick = () => {
+        setIsMenuOpen(false);
+        iconRef.current.classList.remove("fa-times");
+        iconRef.current.classList.add("fa-bars");
+
+        setIsAccountMenuOpen(false);
+    };
+
     return (
         <>
             <nav className={`navbar bg-primary text-light ${isMenuOpen ? "showNavbar" : ""}`}>
@@ -51,14 +61,14 @@ const Nav = () => {
                 <div className={`navbar-part2 ${isMenuOpen ? "showNavbar" : ""}`}>
                     <ul className={`navbar-items ${isMenuOpen ? "showItems" : ""}`}>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/comprar">Comprar</Link>
+                            <Link className="nav-link" to="/comprar" onClick={handleLinkClick}>Comprar</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Cart">Canasta</Link>
+                            <Link className="nav-link" to="/Cart" onClick={handleLinkClick}>Canasta</Link>
                         </li>
                         <li className="nav-item">
                             {/* <Link className="nav-link" to="/orders">Ordenes</Link> */}
-                            {userEmail && <Link className="nav-link" to="/orders">Ordenes</Link>}
+                            {userEmail && <Link className="nav-link" to="/orders" onClick={handleLinkClick}>Ordenes</Link>}
                         </li>
                         {/* <li className="nav-item">
                             <Link to="/login" className="nav-link">Login</Link>
@@ -73,14 +83,19 @@ const Nav = () => {
                             {isAccountMenuOpen && (
                                 <ul className="dropdown-menu">
                                     <li>
-                                        {!userEmail && <Link className="dropdown-item" to="/login">Login</Link>}
+                                        {!userEmail && 
+                                            (
+                                                
+                                                <Link className="dropdown-item" to="/login" onClick={handleLinkClick}>Login</Link>
+                                            )
+                                        }
                                     </li>
                                     <li>
-                                        {!userEmail && <Link className="dropdown-item" to="/registro">Registro</Link>}
+                                        {!userEmail && <Link className="dropdown-item" to="/registro" onClick={handleLinkClick}>Registro</Link>}
                                     </li>
 
                                     <li>
-                                        {userEmail && <Link className="dropdown-item" to="/logout">Logout</Link>}
+                                        {userEmail && <Link className="dropdown-item" to="/logout" onClick={handleLinkClick}>Logout</Link>}
                                     </li>
 
 
