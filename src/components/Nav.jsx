@@ -49,9 +49,11 @@ const Nav = () => {
                 <div className="navbar-part1">
                     <div>
                         <Link to="/" className="navbar-brand">
-                            <span className="logo">MiTienda</span>
+                            <i className="fa-solid fa-house" style={{margin:"0 1rem", fontSize: "1.2rem"}}></i>
                         </Link>
-                        {/* <span style={{marginLeft: "10px"}}>User: {user}</span> */}
+                        {/* <span className="logo">MiTienda</span> */}
+                        <span>MiTienda</span>
+
                         <span style={{marginLeft: "0.5rem", fontSize: "0.9rem"}}>{ userEmail} </span>
                     </div>
                     <button id="navbar-toggler" className="navbar-toggler btn btn-sm btn-close-white" onClick={toggleMenu}>
@@ -64,41 +66,32 @@ const Nav = () => {
                             <Link className="nav-link" to="/comprar" onClick={handleLinkClick}>Comprar</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Cart" onClick={handleLinkClick}>Canasta</Link>
+                            {/* <Link className="nav-link" to="/Cart" onClick={handleLinkClick}>Canasta</Link> */}
+                            <Link className="nav-link" to="/Cart" onClick={handleLinkClick}>
+                                <i className="fa-solid fa-cart-shopping" style={{fontSize:"1.2rem"}}></i>
+                            </Link>
                         </li>
                         <li className="nav-item">
                             {/* <Link className="nav-link" to="/orders">Ordenes</Link> */}
                             {userEmail && <Link className="nav-link" to="/orders" onClick={handleLinkClick}>Ordenes</Link>}
                         </li>
-                        {/* <li className="nav-item">
-                            <Link to="/login" className="nav-link">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/registro">Registro</Link>
-                        </li> */}
                         <li className="nav-item dropdown">
-                            <button style={{pading: "0px", margin: "0px", fontWeight:"600", marginRight: "2rem"}}className="nav-link btn-dropdown" onClick={toggleAccountMenu}>
-                                Account
+                            <button style={{padding: "0px",  fontWeight:"600"}} className="nav-link btn-dropdown" onClick={toggleAccountMenu}>
+                                <i class="fa-solid fa-user" style={{fontSize:"1.2rem"}}></i> 
+                                {/* Account */}
                             </button>
                             {isAccountMenuOpen && (
                                 <ul className="dropdown-menu">
                                     <li>
-                                        {!userEmail && 
-                                            (
-                                                
-                                                <Link className="dropdown-item" to="/login" onClick={handleLinkClick}>Login</Link>
-                                            )
-                                        }
+                                        {!userEmail && <Link className="nav-item" to="/login" onClick={handleLinkClick}>Login</Link> }
                                     </li>
                                     <li>
-                                        {!userEmail && <Link className="dropdown-item" to="/registro" onClick={handleLinkClick}>Registro</Link>}
+                                        {!userEmail && <Link className="nav-item" to="/registro" onClick={handleLinkClick}>Registro</Link>}
                                     </li>
-
                                     <li>
-                                        {userEmail && <Link className="dropdown-item" to="/logout" onClick={handleLinkClick}>Logout</Link>}
+                                        {/* {userEmail && <Link className="dropdown-item" to="/logout" onClick={handleLinkClick}>Logout</Link>} */}
+                                        {userEmail && <Link className="nav-item" to="/logout" onClick={handleLinkClick}>Logout</Link>}
                                     </li>
-
-
                                 </ul>
                             )}
                         </li>
